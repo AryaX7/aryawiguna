@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Biodataku</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="clock" style="text-align: center; padding: 10px; font-size: 18px; color: #333;"></div>
+    <!-- Rest of your existing HTML code goes here -->
+    </div>
+	<div class="main"><br>
+		<div class="img"></div>
+		<h1>Ferdian Arya Wiguna</h1>
+		<div class="test">"We Developer From <strong>City Serang, Indonesia"</strong></div>
+		<p>Halo, Selamat Datang di Website saya. Perkenalkan nama saya arya, anak pertama dari dua bersaudara saat ini saya menempuh pendidikan di SMK NEGERI 7 KOTA SERANG prodi REKAYASA PERANGKAT LUNAK, yang berada di Jl. Kampung Baru, Cipocok Jaya, Panancangan, Serang Sub-District, Panancangan, Kec. Cipocok Jaya, Kota Serang, Banten 42124</p>
+		<br>
+		<ul>
+			<li><a href="https://www.facebook.com/Wiguna199?mibextid=ZbWKwL" target="blank"><img src="fb.jpg" width="32px" height="32px" alt=""></a></li>
+			<li><a href="http://instagram.com/@xenophonnx" target="blank"><img src="ig.jpg" width="32px" height="32px" alt=""></a></li>
+			<li><a href="https://wa.me/+62881012397591?text=assalamualaikum+kak+arya" target="blank"><img src="WA.png" width="32px" height="32px" alt=""></a></li>
+			<li><a href="https://youtube.com/@Arya666DARKNESS?si=gkOx2yJMtJz6-vZu" target="blank"><img src="youtbe.jpg" width="32px" height="32px" alt=""></a></li>
+		</ul>
+	</div>
+	<script>
+        function updateClock() {
+            var currentTime = new Date();
+            var hours = currentTime.getHours();
+            var minutes = currentTime.getMinutes();
+            var seconds = currentTime.getSeconds();
+
+            // Convert 24-hour time format to 12-hour format
+            var meridiem = "AM";
+            if (hours > 12) {
+                hours = hours - 12;
+                meridiem = "PM";
+            }
+
+            // Add leading zeros to minutes and seconds if needed
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            // Display the time in WIB format
+            var timeString = hours + ":" + minutes + ":" + seconds + " " + meridiem;
+            document.getElementById("clock").innerHTML = timeString;
+
+            // Update the clock every second
+            setTimeout(updateClock, 1000);
+        }
+
+        // Run the updateClock function when the page loads
+        window.onload = updateClock;
+    </script>
+
+
+
+</body>
+</html>
